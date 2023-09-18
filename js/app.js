@@ -1,3 +1,5 @@
+//We 
+
 const randomDay = () =>{
     const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
     return daysOfWeek[Math.floor(Math.random()*7)]
@@ -15,13 +17,13 @@ const randomMinutes = () =>{
 const goals = {
     study: {
         code: ['Full-Stack (HTML5/CSS/JS)', 'Java', 'Python', 'C++'],
-        languages: ['Spanish', 'Japanese', 'French', 'German'],
+        foreignLanguages: ['Spanish', 'Japanese', 'French', 'German'],
         healthScience: ['Diet + Nutrition', 'Workout Routines', 'Anatomy']
     },
     exercise: {
         physicalTherapy: ['Circuits', 'Aquatics'],
         cardio: ['Bike', 'Elliptical', 'Swim Laps'],
-        bodyBuild: ['Abs', 'Chest', 'Back/Neck', 'Legs', 'Arms']
+        bodyBuilding: ['Abs', 'Chest', 'Back/Neck', 'Legs', 'Arms']
     },
     meditate: {
         spiritual: ['Read Bible', 'Reflect/Meditate'],
@@ -36,24 +38,23 @@ let todaysGoals = [];
 
 for (let task in goals){
 
-
     switch(task){
         case 'study':
             for(let newStudy in goals.study){
                 let studyIndex = randomGoal(goals.study[newStudy].length);
-                todaysGoals.push(`Study: ${goals[task][newStudy][studyIndex]} - ${randomMinutes()}`)
+                todaysGoals.push(`Study: ${newStudy} - ${goals[task][newStudy][studyIndex]} - ${randomMinutes()}`)
             }
         break;
         case 'exercise':
             for (let newExercise in goals.exercise){
                 let exerIndex = randomGoal(goals.exercise[newExercise].length);
-                todaysGoals.push(`Exercise: ${goals[task][newExercise][exerIndex]} - ${randomMinutes()}`)
+                todaysGoals.push(`Exercise: ${newExercise} - ${goals[task][newExercise][exerIndex]} - ${randomMinutes()}`)
             }
         break;
         case 'meditate':
             for (let newMeditate in goals.meditate){
                 let medIndex = randomGoal(goals.meditate[newMeditate].length);
-                todaysGoals.push(`Meditate: ${goals[task][newMeditate][medIndex]} - ${randomMinutes()}`)
+                todaysGoals.push(`Meditate: ${newMeditate} - ${goals[task][newMeditate][medIndex]} - ${randomMinutes()}`)
             }
         break;
         default: 
