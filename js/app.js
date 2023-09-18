@@ -1,18 +1,20 @@
-//We 
+//randomDay function allows us to select a random day ranging from 0 - 6 (Monday - Sunday)
 
 const randomDay = () =>{
     const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
     return daysOfWeek[Math.floor(Math.random()*7)]
 }
 
-//console.log(randomDay()) - Test 1
+//console.log(randomDay()) - Test 1 (Prints random days of the week)
+
+//randomMinutes allows us to retreive any random number of minutes within the array, yet we divide the array values by 60 in order to convert minutes to hours.
 
 const randomMinutes = () =>{
     const minutes = [15, 30, 45, 60, 75, 90, 105, 120, 135, 150, 165, 180, 195, 210, 225, 240];
     let hours = minutes[Math.floor(Math.random()*16)]/60 + ' hrs';
     return hours;
 }
-//console.log(randomMinutes()) - Test 2
+//console.log(randomMinutes()) - Test 2 (Prints random hours)
 
 const goals = {
     study: {
@@ -31,16 +33,17 @@ const goals = {
         personal: ['Social Media', 'Play Video Games', 'Watch TV', 'Singing', 'Dancing', 'Art (2D/3D/Digital)']
     }
 }
-
+// Helper function that allows us to select values within the array above.
 const randomGoal = goal => Math.floor(Math.random()* goal);
 
 let todaysGoals = [];
 
 for (let task in goals){
-
+// Viewing the "goals" object, we need access to the values of the arrays for our random goals schedule to truly generate any random values/outcome.  The arrays are being contained within a key, from another key; therefore we need a for... in loop, within a for... in loop.
     switch(task){
         case 'study':
             for(let newStudy in goals.study){
+                //studyIndex allows us to get access within the array's values SEPERATELY.  Due to the array being part of an OBJECT, we must impliment .length by setting up studyIndex varialbe, like so.
                 let studyIndex = randomGoal(goals.study[newStudy].length);
                 todaysGoals.push(`Study: ${newStudy} - ${goals[task][newStudy][studyIndex]} - ${randomMinutes()}`)
             }
@@ -62,17 +65,17 @@ for (let task in goals){
         }
 
 }
-
+//fullMessage function allows us to view our printed message from each seperate line per sub-key; within our empty todaysGoals array.
 const fullMessage = message =>{
     let fullSchedule = todaysGoals.join('\n')
     console.log(fullSchedule)
 }
-
+//Prints the application's message (Goal Planner)
 console.log(`${randomDay()}'s Goal Challenges:`)
 fullMessage(todaysGoals);
 
 
-// Retreive 1st and 3rd key seperately, 2nd requires ALL keys.
+
 
 
 
