@@ -1,6 +1,6 @@
-# Random Daily Goals
+# Random Goal Schedule
 
-## This project is based on Codecademy's "Message Generator Program" Project; generating influentially positive habits to complete at the beginning of your day.
+## This project is based on Codecademy's "Message Generator Program" Project; generating random, influential, goal driven schedules; for any day of the week.
 
 This project is to apply the concepts of previous languages and lessons taught so far:
 
@@ -36,7 +36,10 @@ This project is to apply the concepts of previous languages and lessons taught s
 
 ### See a bug flying around?  
 
-* Please initate a pull request 
+* Please initate a pull request, make sure:
+*Proper spelling*
+*All branches have been merged, and deleted properly*
+
 
 ### Want to offer a donation?
 
