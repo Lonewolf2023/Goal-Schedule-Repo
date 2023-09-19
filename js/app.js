@@ -14,7 +14,7 @@ const randomHours = () =>{
     let hours = minutes[Math.floor(Math.random()*16)]/60 + ' hrs';
     return hours;
 }
-//console.log(randomMinutes()) - Test 2 (Prints random hours)
+//console.log(randomHours()) - Test 2 (Prints random hours)
 
 //You are welcome to add/change the values and the arrays within the code
 
