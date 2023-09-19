@@ -46,8 +46,8 @@ Make a pull request and check:
 
 ## License
 
-[MIT License](LICENSE)
+* [MIT License](LICENSE)
 
 ### Want to offer a donation?
 
-*Smiles accepted*
+* *Smiles accepted*
