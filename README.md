@@ -31,8 +31,8 @@ This project is to apply the concepts of previous languages and lessons taught s
 
 ## How to use project for personal use 
 
-* Fork the repository => Click "Code" => Copy by clicking the icon on the right, besides the URL => Past URL in search bar.
-* Use this project as a basic template to create your own message generator, by replacing the text and creating/altering the *Random Generator*
+* Fork the repository => Click "Code" => Copy by clicking the icon on the right, besides the URL => Paste URL in search bar.
+* Use this project as a basic template to create your own "Goal Schedule", by replacing/adding keys and values/arrays.
 
 ## See a bug flying around?  
 

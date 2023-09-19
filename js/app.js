@@ -16,6 +16,8 @@ const randomHours = () =>{
 }
 //console.log(randomMinutes()) - Test 2 (Prints random hours)
 
+//You are welcome to add/change the values and the arrays within the code
+
 const goals = {
     study: {
         code: ['Full-Stack (HTML5/CSS/JS)', 'Java', 'Python', 'C++'],
@@ -32,6 +34,7 @@ const goals = {
         social: ['Hang Out', 'Family Time', 'Party Time'],
         personal: ['Social Media', 'Play Video Games', 'Watch TV', 'Singing', 'Dancing', 'Art (2D/3D/Digital)']
     }
+//Add keys here (DO NOT forget to place comma after "meditate" object)
 }
 // Helper function that allows us to select values within the array above.
 const randomGoal = goal => Math.floor(Math.random()* goal);
@@ -42,8 +45,9 @@ let todaysGoals = [];
 // Viewing the "goals" object, we need access to the values of the arrays for our random goals schedule to truly generate any random values/outcome.  The arrays are being contained within a key, from another key; therefore we need a for... in loop, within a for... in loop.
 
 for (let task in goals){
-
+    
     switch(task){
+        
         case 'study':
             for(let newStudy in goals.study){
                 //studyIndex allows us to get access within the array's values SEPERATELY.  Due to the array being part of an OBJECT, we must impliment ".length" by setting up studyIndex varialbe, like so.
@@ -51,31 +55,36 @@ for (let task in goals){
                 todaysGoals.push(`Study: ${newStudy} - ${goals[task][newStudy][studyIndex]} - ${randomHours()}`)
             }
         break;
+        
         case 'exercise':
             for (let newExercise in goals.exercise){
                 let exerIndex = randomGoal(goals.exercise[newExercise].length);
                 todaysGoals.push(`Exercise: ${newExercise} - ${goals[task][newExercise][exerIndex]} - ${randomHours()}`)
             }
         break;
+        
         case 'meditate':
             for (let newMeditate in goals.meditate){
                 let medIndex = randomGoal(goals.meditate[newMeditate].length);
                 todaysGoals.push(`Meditate: ${newMeditate} - ${goals[task][newMeditate][medIndex]} - ${randomHours()}`)
             }
+        // For adding another key, please follow the previous code implemented for the previous keys. (If you only wish to place a single key within another key, DO NOT ADD a "for...in" loop within "Switch case")
         break;
+        
         default: 
             todaysGoals.push(`Time to go for a random run!`)
+        break;
         }
 
 }
 
-//fullMessage function allows us to view our printed message from each seperate line per sub-key; within our empty todaysGoals array.
+//fullMessage function allows us to view our printed message from each seperate line per sub-key; within our empty todaysGoals array.  We use the "message" parameter to place our "todaysGoals" array.
 const fullMessage = message =>{
     let fullSchedule = todaysGoals.join('\n')
     console.log(fullSchedule)
 }
 
-//Prints the application's message (Goal Planner)
+//Prints the application's message (Random Goal Schedule)
 console.log(`${randomDay()}'s Goal Challenges:`)
 fullMessage(todaysGoals);
 
