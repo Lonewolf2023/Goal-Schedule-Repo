@@ -36,9 +36,9 @@ This project is to apply the concepts of previous languages and lessons taught s
 
 ## See a bug flying around?  
 
-* Please initate a pull request, make sure:
-*Proper spelling*
-*All branches have been merged, and deleted properly*
+Please initate a pull request, make sure:
+* *Proper spelling*
+* *All branches have been merged, and deleted properly*
 
 ## Author 
 
