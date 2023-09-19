@@ -34,12 +34,19 @@ This project is to apply the concepts of previous languages and lessons taught s
 * Fork the repository => Click "Code" => Copy by clicking the icon on the right, besides the URL => Past URL in search bar.
 * Use this project as a basic template to create your own message generator, by replacing the text and creating/altering the *Random Generator*
 
-### See a bug flying around?  
+## See a bug flying around?  
 
 * Please initate a pull request, make sure:
 *Proper spelling*
 *All branches have been merged, and deleted properly*
 
+## Author 
+
+- [@Lonewolf2023](https://github.com/Lonewolf2023)
+
+## License
+
+[MIT License](LICENSE)
 
 ### Want to offer a donation?
 
