@@ -38,7 +38,7 @@ This project is to apply the concepts of previous languages and lessons taught s
 
 Make a pull request and check:
 * Proper spelling
-* All branches have been merged, and deleted properly
+* All code works and is efficient to the project
 
 ## Author 
 
